@@ -63,6 +63,7 @@ moveAround()
         Sleep 2500
 
         Random, r, 5000, 15000
+        Sleep r
     }
     return
 }
