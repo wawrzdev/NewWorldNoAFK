@@ -10,7 +10,7 @@
 #NoEnv                          ;
 SendMode Input                  ; 
 SetWorkingDir, %A_ScriptDir%    ; Starting Dir
-
+SetKeyDelay, 10
 
 WinGet, newWorldId, ID, New World
 
@@ -38,32 +38,31 @@ return
 ;Enabled sending move in X and then randomize a wait time afterwards.
 moveAround() 
 {   
-        Send, {w down}
-        Sleep, 1000
-        Send, {w up}
+    Send, {w down}
+    Sleep, 600
+    Send, {w up}
 
-        Sleep 2500
+    Sleep 2500
 
-        Send, {a down}
-        Sleep, 1000
-        Send, {a up}
+    Send, {a down}
+    Sleep, 500
+    Send, {a up}
 
-        Sleep 2500
+    Sleep 2500
 
-        Send, {d down}
-        Sleep, 1000
-        Send, {d up}
+    Send, {d down}
+    Sleep, 500
+    Send, {d up}
 
-        Sleep 2500
+    Sleep 2500
 
-        Send, {s down}
-        Sleep, 1000
-        Send, {s up}
+    Send, {s down}
+    Sleep, 400
+    Send, {s up}
 
-        Sleep 2500
+    Sleep 2500
 
-        Random, r, 5000, 15000
-        Sleep r
-    }
+    Random, r, 5000, 120000
+    Sleep r
     return
 }
